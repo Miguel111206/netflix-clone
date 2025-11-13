@@ -1,0 +1,449 @@
+/* Netflix Original Subscription Style */
+.subscription-page {
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 0;
+  font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.subscription-header {
+  text-align: center;
+  padding: 60px 20px 40px;
+  background: #fff;
+}
+
+.subscription-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.subscription-header p {
+  font-size: 18px;
+  color: #737373;
+  margin-bottom: 20px;
+}
+
+.plans-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.plan-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid #e6e6e6;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.plan-card:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  transform: translateY(-4px);
+}
+
+.plan-card.selected {
+  border-color: #e50914;
+  box-shadow: 0 8px 16px rgba(229,9,20,0.25);
+}
+
+.plan-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(135deg, #e50914 0%, #ff0a16 100%);
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 0 8px 0 8px;
+  z-index: 10;
+}
+
+.plan-header {
+  padding: 32px 24px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  position: relative;
+}
+
+.plan-card:nth-child(1) .plan-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.plan-card:nth-child(2) .plan-header {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.plan-card:nth-child(3) .plan-header {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.plan-card.selected .plan-header::after {
+  content: '✓';
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  color: #e50914;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.plan-name {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.plan-quality {
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 0.95;
+}
+
+.plan-body {
+  padding: 24px;
+}
+
+.plan-price {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.price-label {
+  font-size: 13px;
+  color: #737373;
+  margin-bottom: 4px;
+}
+
+.price-amount {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+}
+
+.price-amount.discounted {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.original-price {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.final-price {
+  font-size: 20px;
+  color: #46d369;
+  font-weight: 700;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-item {
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.feature-item:last-child {
+  border-bottom: none;
+}
+
+.feature-label {
+  font-size: 13px;
+  color: #737373;
+  margin-bottom: 4px;
+}
+
+.feature-value {
+  font-size: 15px;
+  color: #000;
+  font-weight: 500;
+}
+
+/* Payment Section */
+.payment-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 0 20px 60px;
+}
+
+.payment-box {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  padding: 32px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.payment-box h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 24px;
+}
+
+.coupons-available {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e9ecef 100%);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.coupons-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.coupon-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.coupon-tag {
+  background: #fff;
+  border: 1px solid #e50914;
+  color: #e50914;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.coupon-tag:hover {
+  background: #e50914;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.coupon-input-group {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.coupon-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.coupon-input:focus {
+  outline: none;
+  border-color: #e50914;
+}
+
+.btn-apply-coupon {
+  padding: 12px 24px;
+  background: #e50914;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.btn-apply-coupon:hover {
+  background: #c20812;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-input,
+.form-select {
+  padding: 12px 16px;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+  background: #fff;
+  color: #000;
+}
+
+.form-input:focus,
+.form-select:focus {
+  outline: none;
+  border-color: #e50914;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.btn-subscribe {
+  padding: 16px;
+  background: #e50914;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-subscribe:hover {
+  background: #c20812;
+}
+
+.payment-note {
+  font-size: 12px;
+  color: #737373;
+  text-align: center;
+  margin-top: 16px;
+  line-height: 1.5;
+}
+
+.security-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 12px;
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+
+.security-badge svg {
+  color: #46d369;
+}
+
+.security-text {
+  font-size: 13px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Loading */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #fff;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #e50914;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .subscription-header h1 {
+    font-size: 24px;
+  }
+
+  .plans-grid {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+
+  .payment-box {
+    padding: 24px 20px;
+  }
+
+  .coupon-input-group {
+    flex-direction: column;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.plan-card {
+  animation: slideIn 0.4s ease-out;
+}
+
+.plan-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.plan-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.plan-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
